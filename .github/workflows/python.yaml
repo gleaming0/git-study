@@ -21,4 +21,4 @@ jobs:
         run: |
           mkdir -p artifacts
           python -c "import sys; print(sys.version)" > artifacts/${{ matrix.python-version }}.txt
-
+          echo "Python" > artifacts/${{ matrix.python-version }}_2.txt
