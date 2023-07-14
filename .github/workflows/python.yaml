@@ -15,10 +15,19 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
+
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
+
       - name: Upload Artifact
         run: |
-          mkdir -p artifacts
-          python -c "import sys; print(sys.version)" > artifacts/${{ matrix.python-version }}.txt
-          echo "Python" > artifacts/${{ matrix.python-version }}_2.txt
+          # # mkdir -p artifacts
+          # python -c "import sys; print(sys.version)" > artifacts.txt
+          # echo "Python" > artifacts/${{ matrix.python-version }}
+
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact
+          path: C:\Users\aheun\OneDrive\바탕 화면\BoB\과제\김관영M\git-study\.github\workflows\artifacts
+          
