@@ -29,5 +29,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: artifact
-          path: ./artifacts
+          path: "C:/Users/aheun/OneDrive/바탕 화면/BoB/과제/김관영M/git-study/.github/workflows"
           
